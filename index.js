@@ -3,7 +3,7 @@ const jest = require('jest')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
 const { appendFile } = require('fs')
-const Manager = require('./lib/manager')
+const Manager = require('./lib/Manager')
 
 
 const path = require('path');

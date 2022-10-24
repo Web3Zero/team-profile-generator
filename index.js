@@ -3,7 +3,7 @@ const jest = require('jest')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
 const { appendFile } = require('fs')
-const Manager = require('./lib/Manager')
+const Manager = require('./lib/manager')
 
 
 const path = require('path');
@@ -77,10 +77,10 @@ function appMenu(){
     function addEngineer(){
 
     }
-    function addEngineer(){
+    function addIntern(){
 
     }
-    function addEngineer(){
+    function buildTeam(){
 
     }
 }

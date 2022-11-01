@@ -1,16 +1,20 @@
 
-const jest = require('jest')
-const chalk = require('chalk')
 const inquirer = require('inquirer')
 const { appendFile } = require('fs')
 const Manager = require('./lib/Manager')
-const fs = require('fs')
-const render = require("./src/page-template.js")
-
-const path = require('path');
-const { create } = require('domain')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/intern')
+const fs = require('fs')
+//var fs = require('browserfs')
+
+const path = require('path');
+const DIST_DIR = path.resolve(__dirname,'dist')
+const distPath=path.join(DIST_DIR,'team.html')
+
+const render = require("./src/page-template.js")
+
+const { create } = require('domain')
+
 
 
 console.log('Welcome to the team generator!')
@@ -152,7 +156,7 @@ function appMenu() {
             })
     }
     function buildTeam() {
-        fs.writeFileSync("./dist/team.html", render(teamMembers), "utf-8")
+        fs.writeFileSync(distPath, render(teamMembers), 'utf-8')
     }
     createManager()
 }
